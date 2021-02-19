@@ -6,9 +6,10 @@ using Random = UnityEngine.Random;
 namespace And {
     public class SpawnManager : MonoBehaviour {
         // [SerializeField] GameObject player;
-    
-        [Header("And spawn times")]
-        [SerializeField] GameObject _andPrefab;
+
+        [Header("And spawn times")] [SerializeField]
+        GameObject _andPrefab;
+
         [SerializeField] float _andSpawnTime = 3f;
 
         // [Header("PowerUp spawn times")]
@@ -23,16 +24,17 @@ namespace And {
             // StartCoroutine(PowerUpSpeedSpawn());
             // StartCoroutine(PowerUpShieldSpawn());
         }
-    
+
         IEnumerator AndSpawn() {
             while (true) {
-                transform.position = new Vector2(Random.Range(-50f, 50f), Random.Range(-100f, 100f));
-                var and = Instantiate(_andPrefab, transform.position, quaternion.identity);
-                and.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
+                Transform transform1;
+                (transform1 = transform).position = new Vector2(Random.Range(-50f, 50f), Random.Range(-100f, 100f));
+                var and = Instantiate(_andPrefab, transform1.position, quaternion.identity);
+                and.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
                 yield return new WaitForSeconds(_andSpawnTime);
             }
         }
-    
+
         // IEnumerator PowerUpTripleShotSpawn() {
         //     while (true) {
         //         transform.position = new Vector3(Random.Range(-7f, 7f), Random.Range(5f, 8f), 0);

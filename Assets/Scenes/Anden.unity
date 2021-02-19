@@ -544,7 +544,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Anden
+  m_Text: Anden - 10
 --- !u!222 &1019349242
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -649,7 +649,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeText: {fileID: 692164077}
-  startTime: 30
+  startTime: 240
+  andInstance: {fileID: 6914711831021062940, guid: 5c24d388c29852240888d322d66beebe, type: 3}
+  scoreText: {fileID: 477436254}
+  startScore: 0
+  currentScore: 0
+  _endScore: 10
 --- !u!4 &1687600399
 Transform:
   m_ObjectHideFlags: 0

@@ -1,42 +1,41 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using Random = UnityEngine.Random;
 
 namespace And {
-    public class AndAI : MonoBehaviour {
-        [SerializeField] float _andSpeed = 30f;
-        //[SerializeField] GameObject _andExplosionPrefab;
-        //[SerializeField] bool isAndExplosionAnimationActive = false;
+    public class AndAI : MonoBehaviour, IPointerClickHandler {
+        [SerializeField] float _speed = 30f;
+        public int andTurned;
+
+        public void OnPointerClick(PointerEventData pointerEventData) {
+            _speed = -_speed;
+            andTurned += 1;
+            Debug.Log(name + " Game Object Clicked!");
+            print(andTurned);
+            //transform.Rotate(0, -180, -180);
+        }
 
         void Start() {
             transform.position = new Vector2(Random.Range(-50f, 50f), Random.Range(-100f, 100f));
         }
 
         void Update() {
-            AndMovement();
-            CheckAndMovementY();
-        }
-        
-        void AndMovement() {
-            //AndMoveRight();
-              AndMoveLeft();
+            Move();
+            BoundaryCheckX();
         }
 
-        void AndMoveRight() {
-            transform.Translate(Vector2.right * (_andSpeed * Time.deltaTime));
+        void Move() {
+            transform.Translate(Vector2.right * (_speed * Time.deltaTime));
+            //transform.Rotate(0, 0, 0);
         }
 
-        void AndMoveLeft() {
-            transform.Translate(Vector2.left * (_andSpeed * Time.deltaTime));
-        }
-
-        void CheckAndMovementY() {
-            if (transform.position.x < -0f) {
+        void BoundaryCheckX() {
+            if (transform.position.x != Mathf.Clamp(transform.position.x, 0, 500))
                 Destroy(gameObject);
-            }
-            if (transform.position.x > 500f) {
-                Destroy(gameObject);
-            }
         }
+
+        //[SerializeField] GameObject _andExplosionPrefab;
+        //[SerializeField] bool isAndExplosionAnimationActive = false;
 
         // void PlayAndExplosionAnimation() {
         //     Instantiate(_andExplosionPrefab, transform.position, quaternion.identity);
