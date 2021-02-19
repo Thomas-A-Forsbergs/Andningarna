@@ -362,9 +362,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5813934598800371590, guid: 45e59b776bcd31742a2a4acee6c63e67, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5813934599010185874, guid: 45e59b776bcd31742a2a4acee6c63e67, type: 3}
       propertyPath: m_Text
       value: Anden - 10 / 60s
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813934599556686645, guid: 45e59b776bcd31742a2a4acee6c63e67, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45e59b776bcd31742a2a4acee6c63e67, type: 3}
