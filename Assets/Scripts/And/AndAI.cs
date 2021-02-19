@@ -3,7 +3,7 @@ using Random = UnityEngine.Random;
 
 namespace And {
     public class AndAI : MonoBehaviour {
-        [SerializeField] float _andSpeed = 5f;
+        [SerializeField] float _andSpeed = 30f;
         //[SerializeField] GameObject _andExplosionPrefab;
         //[SerializeField] bool isAndExplosionAnimationActive = false;
 
@@ -13,17 +13,28 @@ namespace And {
 
         void Update() {
             AndMovement();
-            //CheckAndMovementY();
+            CheckAndMovementY();
+        }
+        
+        void AndMovement() {
+            //AndMoveRight();
+              AndMoveLeft();
         }
 
-        void AndMovement() {
+        void AndMoveRight() {
+            transform.Translate(Vector2.right * (_andSpeed * Time.deltaTime));
+        }
+
+        void AndMoveLeft() {
             transform.Translate(Vector2.left * (_andSpeed * Time.deltaTime));
         }
 
         void CheckAndMovementY() {
-            if (transform.position.y < -7f) {
-                var randomRange = Random.Range(-7f, 7f);
-                transform.position = new Vector2(randomRange, 7f);
+            if (transform.position.x < -0f) {
+                Destroy(gameObject);
+            }
+            if (transform.position.x > 500f) {
+                Destroy(gameObject);
             }
         }
 
