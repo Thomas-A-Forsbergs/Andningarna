@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: "Assets/Scenes/Anv\xE4ndare.unity"
+    guid: 958f0d679c867994bb14385f5a3e70ec
+  - enabled: 1
+    path: Assets/Scenes/Andett.unity
+    guid: 540b2962280c95149b0e2c20138b0b88
+  - enabled: 1
+    path: Assets/Scenes/Andrum.unity
+    guid: 83869ca13f51b964d91690146e5c52f9
+  - enabled: 1
+    path: Assets/Scenes/Andra.unity
+    guid: 13ade9661f8e22a4fb78c858d93f7b07
   m_configObjects: {}
