@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: "Assets/Scenes/Anv\xE4ndare.unity"
+    path: "Assets/Scenes/Andv\xE4ndare.unity"
     guid: 958f0d679c867994bb14385f5a3e70ec
   - enabled: 1
     path: Assets/Scenes/Anden.unity
@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Andtre.unity
     guid: c2ea19c50a895aa4ba6ebc8e128618e2
+  - enabled: 1
+    path: Assets/Scenes/Andvändare.unity
+    guid: 958f0d679c867994bb14385f5a3e70ec
   m_configObjects: {}

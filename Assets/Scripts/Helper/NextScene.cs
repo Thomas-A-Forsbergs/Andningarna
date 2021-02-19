@@ -11,13 +11,10 @@ namespace Helper {
         public void RestartSceneButton() {
             var _activeScene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(_activeScene.buildIndex);
-            Debug.Log("Active Scene is '" + _activeScene.name + "'.");
         }
 
         public void RestartFirstSceneButton() {
-            var _activeScene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene("StartGameScene");
-            Debug.Log("Active Scene is '" + _activeScene.name + "'.");
+            SceneManager.LoadScene("Andvändare");
         }
     }
 }

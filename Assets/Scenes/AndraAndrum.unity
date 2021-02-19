@@ -275,5 +275,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: AndrumCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7442625084197298891, guid: 064eb05a6a4df6a4783eadb1582b523e, type: 3}
+      propertyPath: m_Text
+      value: Till Andtre
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 064eb05a6a4df6a4783eadb1582b523e, type: 3}

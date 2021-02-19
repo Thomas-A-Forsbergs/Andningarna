@@ -445,7 +445,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Till Andett
+  m_Text: Till Anden
 --- !u!1 &4553544506345918291
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,7 +627,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter text...
+  m_Text: "Skriv in ditt andv\xE4ndarnamn"
 --- !u!1 &4553544506974747928
 GameObject:
   m_ObjectHideFlags: 0
