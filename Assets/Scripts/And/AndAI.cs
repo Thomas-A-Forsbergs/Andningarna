@@ -1,22 +1,36 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using Helper;
 using Random = UnityEngine.Random;
 
 namespace And {
     public class AndAI : MonoBehaviour, IPointerClickHandler {
         [SerializeField] float _speed = 30f;
-        public int andTurned;
+        GameController gameController;
+
+        [Header("Player variables")]
+        [SerializeField]
+        Text scoreText;
+
+        short currentScore;
+
+        public void Start() {
+            var gameControllerObject = GameObject.FindWithTag("GameController");
+            var gameControllerObjectUI = gameControllerObject.GetComponent<UIManager>();
+            transform.position = new Vector2(Random.Range(-50f, 50f), Random.Range(-100f, 100f));
+        }
 
         public void OnPointerClick(PointerEventData pointerEventData) {
             _speed = -_speed;
-            andTurned += 1;
+            currentScore += 1;
             Debug.Log(name + " Game Object Clicked!");
-            print(andTurned);
+            print(currentScore);
             //transform.Rotate(0, -180, -180);
         }
 
-        void Start() {
-            transform.position = new Vector2(Random.Range(-50f, 50f), Random.Range(-100f, 100f));
+        void DisplayScore() {
+            scoreText.text = $"Vända änder:\n {currentScore}";
         }
 
         void Update() {

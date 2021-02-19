@@ -6,8 +6,7 @@ namespace Helper {
     public class UIManager : MonoBehaviour {
         public Text timeText;
         [SerializeField] float startTime;
-        
-        [SerializeField] GameObject andInstance;
+
         public Text scoreText;
         public short startScore;
         public short currentScore;
@@ -18,6 +17,7 @@ namespace Helper {
             IfTimerIsZeroPlayerIsDefeated();
             DisplayScore();
             NextSceneIfEndScoreIsReached();
+            QuitButton();
         }
 
         void DisplayTime() {
@@ -35,6 +35,20 @@ namespace Helper {
         void NextSceneIfEndScoreIsReached() {
             if (currentScore - startScore >= _endScore)
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
+        public void FullScreenButton() {
+            Screen.fullScreen = !Screen.fullScreen;
+        }
+
+        public void ExitApplicationButton() {
+            Application.Quit();
+        }
+
+        static void QuitButton() {
+            if (Input.GetKeyDown(KeyCode.Escape)) {
+                Application.Quit();
+            }
         }
     }
 }
