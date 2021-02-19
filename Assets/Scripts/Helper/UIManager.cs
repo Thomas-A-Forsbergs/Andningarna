@@ -9,7 +9,7 @@ namespace Helper {
 
         public Text scoreText;
         public short startScore;
-        public short currentScore;
+        public static short currentScore;
         [SerializeField] short _endScore;
 
         void Update() {

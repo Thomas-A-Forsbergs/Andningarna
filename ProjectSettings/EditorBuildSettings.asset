@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: "Assets/Scenes/Andv\xE4ndare.unity"
+    path: Assets/Scenes/Andningarna.unity
     guid: 958f0d679c867994bb14385f5a3e70ec
   - enabled: 1
     path: Assets/Scenes/Anden.unity
@@ -16,11 +16,14 @@ EditorBuildSettings:
     guid: 83869ca13f51b964d91690146e5c52f9
   - enabled: 1
     path: Assets/Scenes/Andra.unity
-    guid: 13ade9661f8e22a4fb78c858d93f7b07
+    guid: efd6ee62d6df08b48b7d4075aa41d439
   - enabled: 1
     path: Assets/Scenes/AndraAndrummet.unity
     guid: e443b5aa3feefef4c8e120d157b1f4c1
   - enabled: 1
     path: Assets/Scenes/Andtre.unity
-    guid: c2ea19c50a895aa4ba6ebc8e128618e2
+    guid: ccf06d56269c0464ea2b389b214bb4f7
+  - enabled: 1
+    path: "Assets/Scenes/Andn\xF6d.unity"
+    guid: 6d2b5c6da99088540a4af3e0b1ccbc73
   m_configObjects: {}
