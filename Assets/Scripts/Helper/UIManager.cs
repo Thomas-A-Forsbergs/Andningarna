@@ -2,26 +2,28 @@
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class UIManager : MonoBehaviour {
-    public Text timeText;
-    public float startTime;
+namespace Helper {
+    public class UIManager : MonoBehaviour {
+        public Text timeText;
+        public float startTime;
+        
+        void Start() {
+            startTime = 30;
+        }
 
-    void Start() {
-        this.startTime = 20;
-    }
+        void Update() {
+            DisplayTime();
+            IfTimerIsZeroPlayerIsDefeated();
+        }
 
-    void Update() {
-        DisplayTime();
-        IfTimerIsZeroPlayerIsDefeated();
-    }
+        void DisplayTime() {
+            timeText.text = $"Tid kvar:\n {startTime - Time.timeSinceLevelLoad:0s}";
+        }
 
-    void DisplayTime() {
-        this.timeText.text = "Time: " + (this.startTime - Time.timeSinceLevelLoad).ToString("0s");
-    }
-
-    void IfTimerIsZeroPlayerIsDefeated() {
-        if (startTime - Time.timeSinceLevelLoad <= 0) {
-            SceneManager.LoadScene("Defeat");
+        void IfTimerIsZeroPlayerIsDefeated() {
+            if (startTime - Time.timeSinceLevelLoad <= 0) {
+                SceneManager.LoadScene("Andvändare");
+            }
         }
     }
 }
